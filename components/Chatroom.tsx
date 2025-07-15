@@ -55,7 +55,7 @@ export default function Chatroom() {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 flex flex-col transition-colors">
-      {/* Fixed Header */}
+     
       <header className="fixed h-15 top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-3 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-100 transition-colors">
         <h1 className="text-lg font-bold">Chatroom</h1>
         <div className="flex items-center gap-2">
@@ -70,7 +70,7 @@ export default function Chatroom() {
         </div>
       </header>
 
-      {/* Content area */}
+     
       <div className="flex-1 flex flex-col mt-16 mb-24 overflow-y-auto">
         <div className="flex-1 flex flex-col-reverse px-4 pb-4">
           <div className="space-y-4">
@@ -132,7 +132,7 @@ export default function Chatroom() {
         )}
       </div>
 
-      {/* Fixed Input area */}
+      
       <div className="fixed bottom-0 left-0 right-0 z-10 border-t border-gray-300 dark:border-gray-700 p-4 flex gap-2 bg-white dark:bg-gray-800 transition-colors">
         <input
           value={input}

@@ -6,7 +6,7 @@ export interface ChatMessage {
   id: string;
   sender: "user" | "ai";
   text?: string;
-  image?: string; // base64
+  image?: string; 
   timestamp: string;
 }
 
@@ -18,11 +18,11 @@ export default function useChatroomMessages() {
 
   const ITEMS_PER_PAGE = 20;
 
-  // Load initial dummy messages
+  
   useEffect(() => {
     const dummy: ChatMessage[] = Array.from({ length: 50 }, (_, i) => ({
       id: crypto.randomUUID(),
-      sender: i % 2 === 0 ? ("user" as const) : ("ai" as const), // ✅ literal type
+      sender: i % 2 === 0 ? ("user" as const) : ("ai" as const), 
       text: `Dummy message ${i + 1}`,
       timestamp: new Date().toISOString(),
     }));
@@ -68,7 +68,7 @@ export default function useChatroomMessages() {
     const newPage = page + 1;
     const dummy: ChatMessage[] = Array.from({ length: 50 }, (_, i) => ({
       id: crypto.randomUUID(),
-      sender: i % 2 === 0 ? ("user" as const) : ("ai" as const), // ✅ literal type
+      sender: i % 2 === 0 ? ("user" as const) : ("ai" as const), 
       text: `Older dummy message ${i + 1}`,
       timestamp: new Date().toISOString(),
     }));

@@ -18,7 +18,7 @@ export interface Chatroom {
 export default function useChatrooms(userId: string) {
   const [chatrooms, setChatrooms] = useState<Chatroom[]>([]);
 
-  // Load chatrooms for the current user
+  
   useEffect(() => {
     const allRooms = getData("chatrooms") || [];
     const userRooms = allRooms.filter(

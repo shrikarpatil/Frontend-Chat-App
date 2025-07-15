@@ -158,10 +158,10 @@ export default function Dashboard() {
                 key={room.id}
                 className="p-4 bg-slate-50 dark:bg-gray-700 rounded-lg shadow flex flex-col gap-2 cursor-pointer hover:bg-slate-100 dark:hover:bg-gray-600 transition-colors"
               >
-                {/* Only the room title area navigates */}
+                
                 <div
                   onClick={() => {
-                    if (editingRoomId === room.id) return; // Don’t navigate if editing
+                    if (editingRoomId === room.id) return; 
                     setModalLoading(true);
                     router.push(`/chatroom/${room.id}`);
                   }}
@@ -181,7 +181,7 @@ export default function Dashboard() {
                     />
                     <button
                       onClick={(e) => {
-                        e.stopPropagation(); // Prevent parent click!
+                        e.stopPropagation();
                         handleUpdateRoom(room.id);
                       }}
                       className="bg-green-600 hover:bg-green-700 text-white py-1 rounded transition"
